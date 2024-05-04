@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+  
+<!-- #region head, title, meta, link-->
+  <head>
+    <meta charset="UTF-8">
+    <title> Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos/form.css">
+   </head>
+<!-- #endregion -->
+
+<!-- #region Contenido del formulario -->
+  <div class="grid">
+  
+  <!-- Body -->
+  <body class="body">
+  
+  <!-- Tiene la cabecera y el menú de navegación igual que el resto de páginas:  -->
+    <!-- Header -->
+      <header class="header"> 
+        <p class="logo"><img src="img/logotienda.jpg"></p>
+        <p>TortuJuega</p>
+        <p>David Ruiz</p>  
+      </header>
+
+      <!-- NAV -->
+      <nav class="nav">
+              <a href="Index.html">Inicio</a>
+              <a href="Login.html">Iniciar sesion</a>      
+      </nav>
+    
+      <!-- #region DIV Container -->
+    <div class="container">
+    <div class="title">Registro</div>
+
+      <!-- #region Contenido -->
+      <div class="content">
+
+          <!-- #region FORMULARIO -->
+        <form action="registrook.html" method="post">
+
+          <!-- #region detalles-user -->
+          <div class="detalles-user">
+
+            <div class="input-caja">
+              <!-- Contiene al menos 3 tipos de elementos variados (inputs, textareas, listas...)  -->
+              <span class="detalles">Nombre completo<span class="required"></span></span>
+              <!-- TIPO ELEMENTO 1: INPUT + Usa restricción de obligatoriedad (al menos una) --> 
+              <input type="text" placeholder="Introduce tu nombre completo" required> <!-- Contiene al menos 4 tipos diferentes de inputs: TEXT --->
+            </div>
+            
+            <div class="input-caja">
+              <span class="detalles">Email</span>
+              <input type="email" placeholder="Introduzca su email" > <!-- Contiene al menos 4 tipos diferentes de inputs: EMAIL --->
+            </div>
+            
+            <div class="input-caja">
+              <span class="detalles">Número de teléfono</span>
+              <input type="tel" placeholder="Introduzca su teléfono" pattern="[679][0-9]{8}" > <!-- Contiene al menos 4 tipos diferentes de inputs: TEL + Usa una restricción de pattern (al menos una) --->
+            </div>
+
+            <div class="input-caja">
+              <span class="detalles">Contraseña<span class="required"></span></span>
+              <input type="password" placeholder="Introduzca su contraseña" required> <!-- Contiene al menos 4 tipos diferentes de inputs: PASSWORD --->
+            </div>
+
+            <div class="input-caja">
+              <span class="detalles">Dirección de envío</span>
+              
+              <!-- TIPO ELEMENTO 2: TEXTAREA + Usa restricción de longitud (al menos una)  -->
+              <textarea name="Direccion" id="direccion" cols="40" rows="2" placeholder="Ej: Calle de los pinos 21, 1ºC" maxlength="100"></textarea> 
+              
+          </div>
+
+          <div class="input-caja">
+              <span class="detalles">Confirma tu contraseña<span class="required"></span></span>
+              <input type="password" placeholder="Confirma tu contraseña" required> <!-- Contiene al menos 4 tipos diferentes de inputs: password --->
+            </div>
+            
+          </div> 
+          <!-- #endregion DETALLES-USER -->
+
+          <!-- #region RADIO (género) -->
+          <div class="genero-detalles">
+            
+          <!-- TIPO ELEMENTO 3: radio (no sé si cuenta como un tipo distino al usarlo con input así que después añadiré más tipos) -->
+          
+          <!-- Para que la apariencia cuadrase con lo que pensé, probé de varias maneras y me salió más o menos de esta forma:  -->
+          
+            <!-- Añado los input con un id, la idea es que cuando el usuario los pulse se vea un punto con un color-->
+            <input type="radio" name="genero" id="punto-1">
+            <input type="radio" name="genero" id="punto-2">
+            <input type="radio" name="genero" id="punto-3">
+          
+            <!--  Pongo el título para que sepa el usuario que es el género con una clase para darle estilos y cambiar su posición-->
+            <span class="genero-titulo">Genero</span>
+          
+            <!-- Creamos un div para almacenar los botones y el texto, cada uno con su label, span y clases para darles los estilos correspondientes -->
+            <div class="categoria">
+                <label for="punto-1">
+                <span class="punto uno"></span>
+                <span class="genero">Hombre</span>
+              </label>
+              <label for="punto-2">
+                <span class="punto dos"></span>
+                <span class="genero">Mujer</span>
+              </label>
+              <label for="punto-3">
+                <span class="punto tres"></span>
+                <span class="genero">Prefiero no contestar</span>
+                </label>
+              </div>
+          </div>
+          <!-- #endregion RADIO-->
+
+          <!-- TIPO 4 ELEMENTO: BUTTON  -->
+          <div class="botones">  
+            <button type="submit">Enviar</button> <!--Tiene opción para hacer submit-->
+            <button type="reset">Limpiar</button> <!--Tiene opción para hacer reset de los campos (limpiar los campos) -->
+          </div>
+
+        </form>
+        <!-- #endregion FORMULARIO -->
+      </div>
+      <!-- #endregion  CONTENIDO -->
+  </div>
+  <!-- #endregion DIV CONTAINER -->
+  <script src="js/Formulario.js"></script>
+</body>
+</div>
+<!-- #endregion CONTENIDO DEL FORMULARIO -->
+</html>

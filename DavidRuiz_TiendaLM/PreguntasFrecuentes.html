@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- #region HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes</title>
+    <link rel="stylesheet" href="estilos/preguntas.css">
+</head>
+<!-- #endregion HEAD -->
+
+<!-- #region CONTENIDO PREGUNTAS FREC. -->
+<body>
+    <div class="container">
+        <!-- Se carga en la misma pestaña (no puse lo de _blank así que no se muy bien donde ponerlo) -->
+        <!-- Tiene la cabecera y el menú de navegación igual que el resto de páginas.  -->
+        
+        <!-- #region HEADER -->
+        <header class="header"> 
+            <!-- Tiene 3 elementos: logo , nombre de la tienda y el nombre del alumno:  -->
+            <p class="logo"><img src="img/logotienda.jpg"></p>
+            <p>TortuJuega</p>
+            <p>David Ruiz</p>  
+        </header>
+        <!-- #endregion HEADER -->
+
+        <!-- #region NAV -->
+        <nav class="nav">
+            <!-- Tiene 2 elementos: home y inicio/registro: -->
+                <a href="Index.html">Inicio</a>
+                <a href="Formulario.html">Iniciar sesion</a>      
+        </nav>
+        <!-- #endregion NAV -->
+
+        <!-- #region ASIDE (enlaces internos) formato desktop cajita en la izquierda / movil arriba del contenido -->
+        <div class="cAside">
+        <aside>
+            <div class="contenido">
+            <h2>Contenido</h2>
+            <ul> <!-- Tiene enlaces internos al contenido:  -->
+                <li><a href="#section1">Métodos de Pago</a></li>
+                <li><a href="#section2">Suscripción Premium</a></li>
+                <li><a href="#section3">Problemas con el Producto</a></li>
+                <li><a href="#section4">Sobre Nosotros</a></li>
+            </ul>
+            </div>
+        </aside>
+    </div>
+    <!-- #endregion ASIDE -->
+
+    <!-- #region PREGUNTAS Y RESPUESTAS -->
+    <!-- Tiene al menos una tabla  -->
+    <table class="tabla">
+        <tr>
+            <td>
+                <!-- #region MAIN -->
+                <main class="faq">
+                    <h1>Preguntas más frecuentes</h1>
+                   
+                    <!-- He dividido los tipos de preguntas por "temas" (aunque sea solo un section en la estructura html
+                        a los temas le llamaré secciones por ej: "Sección 1: Métodos de pago"). 
+                        
+                        Para las preguntas y respuestas se usarán listas con contenido en su interior, las checkbox las uso para dar estilos
+                        y crear una caja desplegable  -->
+
+                    <section>
+
+                    <!-- #region SECCION 1 -->
+                    <h2 id="section1">Métodos de Pago</h2> 
+                        <ul> <!-- Tiene al menos una lista  -->
+                            <!-- Pregunta 1 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i> <!-- Esto es para que se vea la flechita hacia abajo en el desplegable al lado de la pregunta-->
+                                <h3>Métodos de pago alternos para Latinoamérica y España</h3>
+                                <p>Aceptamos varios métodos de pago alternos. Tarjetas Visa / MasterCard (preferiblemente de crédito), PayPal (PayPal solo está disponible para algunos países) y métodos de pago independientes como Google Play o Roku Pay.</p>
+                            </li>
+                            <!-- Pregunta 2 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Es seguro usar mi tarjeta de crédito en su sitio web?</h3>
+                                <p>Por supuesto, utilizamos encriptación de alta seguridad para asegurar que tus detalles de pago estén seguros.
+                                </p>
+                            </li>
+                        </ul>
+                    <!--#endregion SECCION 1  -->
+
+                    <!-- #region SECCION 2 -->
+                    <h2 id="section2">Suscripción Premium</h2>
+                        <ul>
+                            <!-- Pregunta 3 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿En qué consiste la suscripción premium?</h3>
+                                <p>La suscripción premium ofrece varios beneficios. No tendrás gastos de envío, se te proporcionará un bono de descuento del 50% en cualquier producto y si eliges la suscripción anual tendrás la oportunidad de llevarte tu producto de forma gratuita.</p>
+                            </li>
+                            <!-- Pregunta 4 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Cada cuánto debo pagar la suscripción premium?</h3>
+                                <p>Existe la cuota mensual (30 días) o anual (365 días). No tiene permanencia y la puedes cancelar siempre que quieras.</p>
+                            </li>
+                            <!-- Pregunta 5 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Cómo puedo cancelar mi suscripción premium?</h3>
+                                <p>Puedes cancelar tu suscripción en cualquier momento desde la sección de configuración de tu cuenta.</p>
+                            </li>
+                        </ul>
+                    <!-- #endregion SECCION 2 -->
+
+                    <!-- #region SECCION 3 -->
+                    <h2 id="section3">Problemas con el Producto</h2>
+                        <ul>
+                            <!-- Pregunta 6 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Qué ocurre si mi producto no llega o llega dañado?</h3>
+                                <p>Si eso le ocurre no se preocupe, contáctenos y le enviaremos un nuevo producto.</p>
+                            </li>
+                            <!-- Pregunta 7 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Qué debo hacer si mi producto se rompe?</h3>
+                                <p>Si tu producto se rompe dentro del periodo de garantía, por favor contáctanos con los detalles y estaremos encantados de ayudarte.</p>
+                            </li>
+                            <!-- Pregunta 8 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Cómo puedo rastrear mi pedido?</h3>
+                                <p>- Una vez que tu pedido ha sido enviado, te enviaremos un correo electrónico con la información de seguimiento. También puedes rastrear tu pedido en la sección "Mi cuenta" de nuestro sitio web.</p>
+                            </li>
+                            <!-- Pregunta 9 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Cómo puedo devolver mi producto?</h3>
+                                <p>Si no estás satisfecho con tu producto, puedes devolverlo dentro de los 30 días siguientes a la compra. Por favor, contáctanos para obtener más detalles sobre el proceso de devolución.</p>
+                            </li>
+                        </ul>
+                    <!-- #endregion SECCION 3 -->
+
+                    <!-- #region SECCION 4 -->
+                    <h2 id="section4">Sobre Nosotros</h2>
+                        <ul>
+                            <!-- Pregunta 10 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Dónde se os puede encontrar?</h3>
+                                <p>Estamos localizados en el IES Avellaneda</p>
+                            </li>
+                            <!-- Pregunta 11 -->
+                            <li>
+                                <input type="checkbox" checked>
+                                <i></i>
+                                <h3>¿Hacen envíos internacionales?</h3>
+                                <p>Sí, hacemos envíos a la mayoría de los países. Los gastos de envío se calcularán en el momento del pago.</p>
+                            </li>
+                        </ul>
+                    <!-- #endregion SECCION 4 -->
+                </section>
+               
+                </main>
+                <!-- #endregion MAIN -->
+            </td>
+        </tr>
+    </table>
+    <!-- #endregion PREGUNTAS Y RESPUESTAS  -->
+
+    <script src="javaScript/faqEnlace.js"></script> <!-- Arreglando enlaces internos-->
+</body>
+<!-- #endregion CONTENIDO PREGUNTAS FREC. -->
+</html>

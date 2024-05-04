@@ -1,0 +1,292 @@
+/* Lo hice opcional, no hace falta corregir!!!. He copiado el css del form simplemente para que quede bien el login */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.div{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "body";
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to bottom, rgb(24, 26, 42), rgb(24, 100, 11));
+  color: rgb(255, 255, 255);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.logo {
+  width: 5%;
+}
+
+
+.header p {
+  margin: 0 auto;
+  font-size: 1.2em;
+}
+
+.header img {
+  height: 10%;
+  width: 10%;
+  border-radius: 50%;
+  min-width: 100%; 
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(to bottom, rgb(22, 105, 19), rgb(23, 172, 31));
+  margin-bottom: 10px; 
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.nav a {
+  margin: 0 20px;
+  font-size: 1.2em;
+  color: white; 
+  text-decoration: none;
+}
+
+.nav a:hover {
+  color: #ddd; 
+}
+
+
+body{
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: url('../img/formulario.jpg');
+  background-position: center 40%;
+  background-repeat: no-repeat;
+}
+.container{
+  max-width: 1700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgb(22, 105, 19), rgb(23, 172, 31));
+}
+.content form .detalles-user{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .detalles-user .input-caja{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-caja span.detalles{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+input:invalid {
+  box-shadow: 0 0 10px red;
+}
+input:valid {
+   box-shadow: none;
+}
+/* He puesto esto por la rúbrica pero no cambio el color por cuestiones estéticas, no me gusta como queda cambiando el fondo*/
+input[required] {
+  background-color: #ffffff;
+}
+/* Le añado esto para marcar los obligatorios */
+span.required::before {
+  content: "*";
+  color: red;
+  margin-left: 4px; 
+  display: inline-block;
+}
+.detalles-user .input-caja input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.detalles-user .input-caja input:focus,
+.detalles-user .input-caja input:valid{
+  border-color: #9b59b6;
+}
+ form .genero-detalles .genero-titulo{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ /* #region textarea */
+.textarea {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto; /* Centra horizontalmente */
+  width: 100%; /* Ajusta el ancho según tus necesidades */
+}
+
+textarea {
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  background-color: rgba(255, 255, 255, 0.9); 
+  padding: 2%;
+  border-radius:3px; 
+  border :1px solid #ccc;  
+  box-shadow :0px 0px 5px #aaa;  
+  text-align:left;  
+  resize:none;  
+}
+
+textarea::placeholder {
+  opacity :0.7 ;   
+}
+/* #endregion */
+
+ form .categoria{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .categoria label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .categoria label .punto{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #punto-1:checked ~ .categoria label .uno,
+ #punto-2:checked ~ .categoria label .dos,
+ #punto-3:checked ~ .categoria label .tres{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .botones {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+}
+
+form .botones button{
+   flex: 1;
+   margin: 0 10px;
+ 
+   height: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(to bottom, rgb(22, 105, 19), rgb(23, 172, 31));
+}
+form .botones button:hover{
+  background: linear-gradient(to bottom, rgb(24, 26, 42), rgb(24, 100, 11));
+}
+
+
+
+ @media(max-width: 584px){
+ .container{
+  max-width: 100%;
+}
+form .detalles-user .input-caja{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .categoria{
+    width: 100%;
+  }
+  .content form .detalles-user{
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .detalles-user::-webkit-scrollbar{
+    width: 5px;
+  }
+  }
+  @media(max-width: 459px){
+  .container .content .categoria{
+    flex-direction: column;
+  }
+}
+
+
+@media(max-width: 376px){
+  .header{margin-top: 50px;}
+  .nav{
+    margin: 0;
+   height: 1px; 
+   font-size: 10px;
+  }
+}
+
+
+
+
+
+@media(min-width: 1100px){
+  .header{
+    left: 0;
+  top: 0;
+    position: absolute;
+    width: 100%;
+}
+.nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 6%;
+}
+}

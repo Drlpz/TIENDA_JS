@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); /* FUENTE IMPORTADA: POPPINS */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+.div{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "body";
+}
+
+/* #region header */
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgb(24, 26, 42), rgb(24, 100, 11));
+    color: rgb(255, 255, 255);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  .logo {
+    width: 5%;
+  }
+
+
+  .header p {
+    margin: 0 auto;
+    font-size: 1.2em;
+  }
+
+  .header img {
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    min-width: 100%; 
+  }
+
+/* #endregion HEADER */
+
+/* #region nav */
+  
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(to bottom, rgb(22, 105, 19), rgb(23, 172, 31));
+    margin-bottom: 10px; 
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    }
+
+    .nav a {
+    margin: 0 20px;
+    font-size: 1.2em;
+    color: white; 
+    text-decoration: none;
+    }
+
+    .nav a:hover {
+    color: #ddd; 
+  }
+
+  /* #endregion NAV */
+
+/* #region body y container */
+
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-image: url('../img/formulario.jpg');
+    background-position: center 40%;
+    background-repeat: no-repeat;
+  }
+
+  .container {
+    max-width: 800px; /* Reduzco el ancho máximo del contenedor */
+    width: 80%; /* Utilizo un porcentaje del ancho del contenedor padre */
+    padding: 20px; /* Reduzco el padding para hacer el contenedor más delgado */
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .fa-eye {
+    cursor: pointer;
+  }
+  .container .title {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .container .title::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, rgb(22, 105, 19), rgb(23, 172, 31));
+  }
+
+/* #endregion BODY/CONTAINER */
+
+/* #region Seccion de detalles del usuario: 
+
+    - Usamos un flex para poner espacio entre los elementos.
+    - Ajustamos el margen para mejorar la apariencia.
+    - Establecemos  ancho y márgenes para los elementos que están dentro
+    - Ponemos estilos como font-weight para los elementos que están dentro de .input-caja.
+    - Por último retocamos el estilo y márgenes, altura , etc de otros elementos como por ejemplo el color de los botones del radio  */
+
+  .content form .detalles-user{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+  
+  form .detalles-user .input-caja{
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  form .input-caja span.detalles{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .input-caja {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 15px;
+  }
+  
+  
+  .detalles-user .input-caja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .detalles-user .input-caja input{
+    height: 45px;
+    width: 50%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+  
+  .detalles-user .input-caja input:focus, .detalles-user .input-caja input:valid{
+    border-color: #9b59b6;
+  }
+
+   form .genero-detalles .genero-titulo{
+    font-size: 20px;
+    font-weight: 500;
+   }
+
+/* #endregion DETALLES */
+
+/* #region Selectores de inválido y requerido:  */
+  
+  /* #region INVÁLIDO */
+  
+    /* Hacemos que los campos que sean invalidos se muestren con una sombra a su alrededor roja */
+  
+    input:invalid {
+      box-shadow: 0 0 10px red;
+    }
+
+  /* Si dejo solo el invalid por alguna razón me salen los válidos en rojo también por lo que ponemos que en los válidos no haya box-shadow */
+  
+    input:valid {
+      box-shadow: none;
+    }
+  /* #endregion INVALIDO */
+
+  /* #region REQUIRED */
+        
+    /*  REQUIRED: Lo pongo por la rúbrica pero no cambio el color porque no me gusta como queda cambiando el fondo */
+    /* Mediante selectores CSS indica al usuario los campos obligatorios  */
+
+    input[required] {
+      background-color: #ffffff;
+    }
+   
+    /* Para mostrar cúal es obligatorio añado un asterisco rojo */
+
+    span.required::before {
+      content: "*";
+      color: red;
+      margin-left: 4px; 
+      display: inline-block;
+    }
+
+  /* #endregion REQUIRED */
+
+/* #endregion SELECTORES */
+
+ /* #region textarea, simplemente ajustamos el textarea al contenedor y hacemos que quede lo mejor posible */
+    .textarea {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin: auto; 
+      width: 100%; 
+    }
+
+    textarea {
+      font-family: 'Poppins', sans-serif;
+      color: #000000;
+      background-color: rgba(255, 255, 255, 0.9); 
+      padding: 2%;
+      border-radius:3px; 
+      border :1px solid #ccc;  
+      box-shadow :0px 0px 5px #aaa;  
+      text-align:left;  
+      resize:none;  
+    }
+
+    textarea::placeholder {
+      opacity :0.7 ;   
+      text-align: center;
+  }
+/* #endregion TEXTAREA */
+
+/* #region ESTILOS RADIO/BOTONES */
+  
+  form .categoria{
+    display: flex;
+    width: 80%;
+    margin: 14px 0 ;
+    justify-content: space-between;
+  }
+
+  form .categoria label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  form .categoria label .punto{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  /* Ponemos esto para que se vean algo mejor los botones */
+  #punto-1:checked ~ .categoria label .uno,
+  #punto-2:checked ~ .categoria label .dos,
+  #punto-3:checked ~ .categoria label .tres{
+    background: #9b59b6;
+    border-color: #d9d9d9;
+  }
+
+  form input[type="radio"]{
+    display: none;
+  }
+
+  form .botones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    margin: auto;
+  }
+
+  form .botones button{
+    flex: 1;
+    margin: 0 10px;
+    height: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(to bottom, rgb(22, 105, 19), rgb(23, 172, 31));
+  }
+a {
+  cursor: pointer;
+}
+  form .botones button:hover{
+    background: linear-gradient(to bottom, rgb(24, 26, 42), rgb(24, 100, 11));
+  }
+
+/* #endregion ESTILOS RADIO/BOTONES */
+
+/* #region RESPONSIVE/MEDIA */
+
+/* RESPONSIVE (adaptación al dispositivo). Se ve bien en formato desktop y se va adaptando hasta llegar a un formato móvil (450 px) */
+
+  /* ¡¡¡¡ En el formato móvil/tablet se verá una parte de los input. Hice eso para que se puedan ir desplazando hacia arriba o abajo los campos manualmente ya sea
+    con la rueda del ratón o deslizando !!!! */
+  
+  /* He puesto varios media para corregir bugs ya que en mi sobremesa se podía ver perfectamente (probando el responsive simulando tamaños en el navegador)
+    pero sin embargo en dispositivos mas pequeños como mi portatil no, ahora debería estar todo bien */
+   
+    /* MÓVIL */
+
+    /* #region 584px */
+      @media(max-width: 584px){
+        .header{
+          margin-top: 5%;
+        }
+
+      .container{
+        max-width: 100%;
+      margin-top: 2%;
+      }
+      form .detalles-user .input-caja{
+          margin-bottom: 15px;
+          width: 100%;
+        }
+        form .categoria{
+          width: 100%;
+        }
+        .content form .detalles-user{
+          max-height: 300px;
+          overflow-y: scroll;
+        }
+        .detalles-user::-webkit-scrollbar{
+          width: 5px;
+        }
+        }
+      /* #endregion */
+    
+      /* #region 450px */
+      @media(max-width: 450px){
+        .header{
+          margin-top: 5%;
+        }
+
+      .container .content .categoria{
+        flex-direction: column;
+      }
+
+      .container {
+        margin-top: 0;
+      }
+    }
+    /* #endregion */
+
+    /* #region 378px - 449px */
+    @media (min-width: 378px) and (max-width: 449px){
+      
+      .header{
+        margin-top: 5%;
+      }
+
+      .nav{
+        margin: 0;
+      height: 1px; 
+      font-size: 10px;
+      }
+
+      .container {
+        margin-top: 0;
+      }
+    }
+    /* #endregion */
+
+    /* #region Arreglando bugs en dispositivos moviles 376px y 300px */
+    @media(max-width: 376px){
+
+      .header{
+        margin-top: 5%;
+      }
+
+      .nav{
+        margin: 0;
+      height: 1px; 
+      font-size: 10px;
+      }
+
+      .container {
+        margin-top: 0;
+      }
+    }
+    
+
+    @media(max-width:300px) {
+
+      .header{
+        margin-top: 5%;
+      }
+
+    .container ,.header, .nav{
+      max-width: 80%;
+      margin: auto;
+    }
+
+    .container {
+      margin-top: 0;
+    }
+
+    .header {
+      font-size: 0.5rem;
+    }
+    }
+    /* #endregion */
+
+  /* #region Media arreglando bugs a partir de 900px */
+    @media(min-width: 900px){
+
+    .header {
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+    }
+
+    .nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin-top: 6%;
+    }
+
+    .container {
+      margin-top: 10%;
+    }
+    }
+  /* #endregion */
+/* #endregion RESPONSIVE/MEDIA */

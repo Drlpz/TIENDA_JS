@@ -1,0 +1,59 @@
+<!-- Lo hice opcional, no hace falta corregir!!! Esto lo puse opcionalmente para que si le das a iniciar sesion saliese algo. Como es algo opcional he copiado el formulario y lo he adaptado a un Login asi que no está muy
+trabajado  -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Login </title>
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="estilos/Login.css">
+   </head>
+   
+<div class="grid">
+   <header class="header"> 
+    <!-- Tiene 3 elementos: logo , nombre de la tienda y el nombre del alumno:  -->
+    <p class="logo"><img src="img/logotienda.jpg"></p>
+    <p>TortuJuega</p>
+    <p>David Ruiz</p>  
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+    <!-- Tiene 2 elementos: home y inicio/registro: -->
+        <a href="Index.html">Inicio</a>
+        <a href="Formulario.html">Registro</a>      
+</nav>
+
+<body class="body">
+  <div class="container">
+    <div class="title">Login</div>
+    <div class="content">
+      <form action="#">
+        <div class="detalles-user">
+
+    
+          <div class="input-caja">
+            <span class="detalles">Nombre de usuario</span>
+            <input type="text" placeholder="Introduce tu usuario" required>
+          </div>
+          
+       
+          <div class="input-caja">
+            <span class="detalles">Contraseña</span>
+            <input type="password" placeholder="Introduce tu contraseña" required>
+          </div>
+
+
+        </div>
+     
+        <div class="botones">
+          <button type="submit">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</div>
+</html>
